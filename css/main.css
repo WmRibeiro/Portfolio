@@ -1,1 +1,110 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css");
+*{
+    margin:0;
+    padding:0;
+}
+header {
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden;
+    position: relative;
+}
+
+.imagem-header {
+    width: 100%;
+    height: 100%;
+    overflow:hidden;
+    background-color: rgb(6, 18, 59);
+    animation: zoom 25s;
+}
+
+@keyframes zoom{
+    0%{
+         transform: scale(1.3);
+     }
+    100%{
+        transform:scale(1);
+    }
+}
+
+.imagem-header img { /* responsivo */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;/* a imagem é coberta assim não ficando explimida */
+    opacity: 50%;
+}
+
+.banner {
+    position: absolute;
+    top:30%;
+    left:10%;
+    
+}
+
+@keyframes bannermove{
+
+    0%{
+        transform: translateY(10rem) rotateY(-30deg);
+    }
+    100%{
+        transform: translateY(0)rotateY(0);
+        opacity: 1;
+    }
+    
+}
+
+.banner h1 {
+    color:white;
+    font-size: 3rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 200;
+    text-shadow:.3rem .4rem 2px black;
+    animation: bannermove 1s 0.7s forwards;
+    opacity: 0;
+}
+.banner p {
+    color:white;
+    font-size: 1.5rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 200;
+    text-shadow:.3rem .4rem 2px black;
+    line-height: 5rem;
+    animation: bannermove 1s 0.5s forwards;
+    opacity: 0;
+}
+
+.menu-top-conteudo {
+top: 10%;
+margin: -11px;
+
+
+}
+.menu-top-conteudo ul {
+    top:2%;
+    position:fixed;
+   /* background-color: aqua;*/
+    width: 100%;    
+    height: 60px;
+    opacity: 80%;
+    text-align: right;
+}  
+
+.menu-top-conteudo ul li {
+display:inline ;
+text-decoration: none;
+}
+.menu-top-conteudo ul li i {
+    padding:0.5cm;
+}
+.menu-top-conteudo ul li a {
+    color:white;
+    text-decoration: none;
+    padding-left: 2rem;
+    font-size:1.2rem;
+}
+.menu-top-conteudo ul li a:hover {
+    color:rgb(37, 218, 20);
+
+}
+
+
